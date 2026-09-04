@@ -1,7 +1,9 @@
 $schema: https://unpkg.com/release-it@20/schema/release-it.json
 git:
   commit: true
+  commitMessage: "chore: release v${version}"
   tag: true
+  tagName: "v${version}"
   push: true
 github:
   release: true
@@ -9,7 +11,7 @@ npm:
   publish: true
   publishPackageManager: pnpm
   skipChecks: true
-plugins: 
+plugins:
   "@release-it/conventional-changelog":
     preset:
       name: conventionalcommits

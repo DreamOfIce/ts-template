@@ -24,6 +24,9 @@
     },
     "./package.json": "./package.json"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com"
+  },
   "scripts": {
     "build": "tsdown",
     "fmt": "oxfmt",
@@ -48,7 +51,8 @@
     "typescript": "^7.0.2"
   },
   "nano-staged": {
-    "*.{js,ts}": "pnpm run \"/fmt|lint/\""
+    "*": "pnpm fmt",
+    "*.{c,m}?{js,ts}": "pnpm lint"
   },
   "devEngines": {
     "packageManager": {
