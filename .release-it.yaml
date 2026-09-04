@@ -1,0 +1,16 @@
+$schema: https://unpkg.com/release-it@20/schema/release-it.json
+git:
+  commit: true
+  tag: true
+  push: true
+github:
+  release: true
+npm:
+  publish: true
+  publishPackageManager: pnpm
+  skipChecks: true
+plugins: 
+  "@release-it/conventional-changelog":
+    preset:
+      name: conventionalcommits
+    infile: CHANGELOG.md
