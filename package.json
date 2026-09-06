@@ -51,7 +51,7 @@
     "typescript": "^7.0.2"
   },
   "nano-staged": {
-    "*": "pnpm fmt",
+    "*": "pnpm fmt --no-error-on-unmatched-pattern",
     "*.{c,m}?{js,ts}": "pnpm lint"
   },
   "devEngines": {
